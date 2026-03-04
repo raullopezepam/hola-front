@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: hola-front:v2
-        imagePullPolicy: Never
+        image: ghcr.io/raullopezepam/hola-front:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
         env: # <--- AQUÍ DEFINES LA VARIABLE PARA KUBERNETES
