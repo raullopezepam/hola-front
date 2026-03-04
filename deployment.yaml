@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hola-front
+  template:
+    metadata:
+      labels:
+        app: hola-front
+    spec:
+      containers:
+      - name: frontend
+        image: hola-front:v2
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3000
+        env: # <--- AQUÍ DEFINES LA VARIABLE PARA KUBERNETES
+        - name: SALUDO_USER
+          value: "Hola desde las variables de entorno de EPAM-Neoris"
