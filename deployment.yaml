@@ -18,6 +18,6 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
-        env: # <--- AQUÍ DEFINES LA VARIABLE PARA KUBERNETES
+        env:
         - name: SALUDO_USER
-          value: "Hola desde las variables de entorno de EPAM-Neoris"
+          value: "Hola"
